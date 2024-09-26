@@ -14,7 +14,7 @@
         $inteiro = (int) $absoluto;
         $decimal = substr(strpbrk($absoluto, '.'), 1);
         $cont = iconv_strlen($decimal);
-        $frac = $decimal / 10 ** $cont;
+        $frac = $absoluto - $inteiro;
         echo "Alisando o número " . number_format($absoluto, $cont, ",", ".") . " informado pelo usúario:";
         echo "
         <ul>
