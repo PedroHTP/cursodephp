@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro genérico</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header><h1>Login genérico</h1></header>
+    <section>
+        <form action="globais.php?tipo=cliente&prioridade=baixa" method="post">
+            <label for="usu">Usuário:</label>
+            <input type="text" name="usu" id="idusu">
+            <label for="senha">Senha:</label>
+            <input type="password" name="senha" id="idsenha">
+            <input type="submit" value="Cadastrar">
+        </form>
+    </section>
+</body>
+</html>
