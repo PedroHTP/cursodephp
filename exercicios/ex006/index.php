@@ -8,8 +8,8 @@
 </head>
 <body>
     <?php 
-        $valor1 = $_POST['v1'] ?? 0;
-        $valor2 = $_POST['v2'] ?? 0;
+        $valor1 = $_POST['v1'] ?? "N";
+        $valor2 = $_POST['v2'] ?? "N";
     ?>
     <main>
         <h1>A soma de dois valores</h1>
@@ -22,7 +22,7 @@
         </form>
     </main>
         <?php 
-            if ($valor1!=0 or $valor2!=0) {
+            if ($valor1!= "N" or $valor2 != "N") {
                 $soma = $valor1 + $valor2;
                 echo "<section>
                     <h2>Resultado da soma</h2>
