@@ -29,21 +29,20 @@
 
     if ($salario >= MSALARIO) {
         $isalario = intdiv($salario, MSALARIO);
-        $total = $isalario * MSALARIO;
-        $resto = $salario - $total;
+        $resto = $salario % MSALARIO;
         print
             "<section>
                     <h2>Resultado Final</h2>
                     <p>Quem recebe um salário de " . numfmt_format_currency($padrao, $salario, "BRL") . " ganha <strong>" . $isalario;
         if ($isalario > 1) {
-            print " salários mínimos </strong>";
+            print " salários mínimos</strong>";
         } else {
-            print " salário mínimo </strong>";
+            print " salário mínimo</strong>";
         }
         if ($resto > 0) {
-            echo " + " . numfmt_format_currency($padrao, $resto, "BRL") . ".</p>";
+            echo " + " . numfmt_format_currency($padrao, $resto, "BRL");
         }
-        print "</section>";
+        print ".</p></section>";
     } else if ($salario != false) {
         $porsalario = round(($salario / MSALARIO) * 100);
         print "<section>

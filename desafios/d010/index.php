@@ -25,13 +25,16 @@
         </form>
     </main>
     <?php 
-        if ($nasce != false) {
+        if ($nasce != false and $nasce < $ano) {
             $idade = $ano - $nasce;
             echo "
                 <section>
                     <h1>Resultado</h1>
-                    <p>Quem nasceu em ". $nasce ." vai ter <strong>" . $idade . " anos</strong> em " . $ano . "</p>
-                </section>
+                    <p>Quem nasceu em ". $nasce ." vai ter <strong>" . $idade . " ano";
+                if ($idade > 1) {
+                    echo"s";
+                }    
+            echo "</strong> em " . $ano . "</p></section>
             ";
         }
     ?>
