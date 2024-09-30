@@ -22,9 +22,9 @@
     <main>
         <h1>Caixa Eletrônico</h1>
         <form action="<?=$_SERVER['PHP_SELF']?>" method="get">
-            <label for="sacar">Qual valor você deseja sacar? (R$)*</label>
+            <label for="sacar">Qual valor você deseja sacar? (R$)<sup>*</sup></label>
             <input type="number" name="sacar" id="idsacar" step="5" value="<?=$valor?>" min="5">
-            <p>*Notas disponíveis: R$100, R$50, R$10, R$5</p>
+            <p><sup>*</sup>Notas disponíveis: R$100, R$50, R$10, R$5</p>
             <input type="submit" value="Sacar">
         </form>
         <img src="" alt="">

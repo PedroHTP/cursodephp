@@ -11,7 +11,7 @@
 <body>
     <?php 
         $valor = $_GET ['valor'] ?? false;
-        $reajuste = $_GET['reajuste'] ?? 0;
+        $reajuste = $_GET['reajuste'] ?? 1;
         $padrao = numfmt_create("pt-BR", NumberFormatter::CURRENCY);
     ?>
     <header>
@@ -34,7 +34,7 @@
             <h1>Resultado do Reajuste</h1>
             <p>O produto que custava ". numfmt_format_currency($padrao, $valor, "BRL") .", com <strong>". $reajuste."% de aumento</strong> vai passar a custar <strong>". numfmt_format_currency($padrao, $valorn, "BRL") ."</strong> a partir de agora.</p>
         </section>";
-    }
+        }
     ?>
     <script>
     mudaValor()
