@@ -20,9 +20,9 @@
     <main>
         <form action="<?=$_SERVER['PHP_SELF']?>" method="get">
             <label for="valor">Preço do Produto (R$)</label>
-            <input type="number" name="valor" id="idvalor" value="<?=$valor?>">
+            <input type="number" name="valor" id="idvalor" value="<?=$valor?>" min="0.01" step="0.01">
             <label for="reajuste">Qual será o percentual do reajuste? <strong><span id="p">?</span>%</strong></label>
-            <input type="range" name="reajuste" id="reajuste" min="0" max="100" step="1" oninput="mudaValor()"
+            <input type="range" name="reajuste" id="reajuste" min="1" max="100" step="1" oninput="mudaValor()"
             value="<?= $reajuste ?>">
             <input type="submit" value="Calcular">
         </form>
