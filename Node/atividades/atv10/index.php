@@ -11,7 +11,6 @@
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $formatospermitidos = array ('png', 'jpeg', 'jpg',  'gif');
 
-
             foreach ($_FILES['arquivo']['name'] as $indice => $valor) {
             
                 $extensao = pathinfo($_FILES['arquivo']['name'][$indice], PATHINFO_EXTENSION);
