@@ -1,4 +1,7 @@
 <?php
+// conexao
+require_once './db_connect.php';
+
     function clear($input) {
         global $connect;
         // sql
